@@ -2,18 +2,32 @@
 	<span>PyroCMS requires that JavaScript be turned on for many of the functions to work correctly. Please turn JavaScript on and reload the page.</span>
 </noscript>
 
-<div class="topbar" dir=<?php $vars = $this->load->get_vars(); echo $vars['lang']['direction']; ?>>
-	
+<div class="primary_bar">
 	<div class="wrapper">
-		<div id="logo">
-			<?php echo anchor('admin', $this->settings->site_name, 'target="_blank"'); ?>
+		<div id="welcome">
+			<?php echo gravatar($current_user->email, 25); ?> <?php echo anchor('edit-profile', sprintf(lang('cp_logged_in_welcome'), $current_user->display_name . ' <i class="icon-edit icon-white"></i>')); ?>
 		</div>
-	
+
+		<nav id="usernav">
+			<ul>
+				<li><i class="icon-eye-open icon-white"></i> <?php echo anchor('', lang('cp_view_frontend'), 'target="_blank"'); ?></li>
+				<li><i class="icon-off icon-white"></i> <?php echo anchor('admin/logout', lang('cp_logout_label')); ?></li>
+				<li><i class="icon-question-sign icon-white"></i> <?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<div class="secondary_bar" dir=<?php $vars = $this->load->_ci_cached_vars; echo $vars['lang']['direction']; ?>>
+	<div class="wrapper">
+		<div id="site_logo">
+			<h3><?php echo anchor('', $this->settings->site_name, 'target="_blank"'); ?></h3>
+		</div>
+
 		<nav id="primary">
 			<?php file_partial('navigation'); ?>
 		</nav>
 	</div>
-	
 </div>
 
 <div class="subbar">

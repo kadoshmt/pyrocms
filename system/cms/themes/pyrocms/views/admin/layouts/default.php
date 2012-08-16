@@ -19,10 +19,7 @@
 	<meta name="viewport" content="width=device-width,user-scalable=no">
 
 	<!-- CSS. No need to specify the media attribute unless specifically targeting a media type, leaving blank implies media=all -->
-	<?php echo Asset::css('plugins.css'); ?>
-	<?php echo Asset::css('workless/workless.css'); ?>
-	<?php echo Asset::css('workless/application.css'); ?>
-	<?php echo Asset::css('workless/responsive.css'); ?>
+	<?php echo Asset::css('workless/minified.css.php'); ?>
 	<!-- End CSS-->
 
 	<!-- metadata needs to load before some stuff -->
@@ -32,20 +29,15 @@
 
 <body>
 
-	<div id="container">
-
-		<section id="content">
-
-			<?php file_partial('header'); ?>
-
+	<section id="content">
+		<?php file_partial('header'); ?>
+		<?php file_partial('notices'); ?>
+		<div class="wrapper">
 			<div id="content-body">
-				<?php file_partial('notices'); ?>
 				<?php echo $template['body']; ?>
 			</div>
-
-		</section>
-
-	</div>
+		</div>
+	</section>
 
 	<footer>
 		<div class="wrapper">
