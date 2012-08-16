@@ -673,6 +673,11 @@ nav#shortcuts ul li a:hover
 	padding-top: 7px;
 }
 
+#quick_links ul li i
+{
+	margin-top: -2px;
+}
+
 /* recent comments */
 #recent_comments ul li
 {
