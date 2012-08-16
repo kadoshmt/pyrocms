@@ -412,7 +412,7 @@ nav#primary ul li ul li a.current:hover
 {
 	margin-top: 18px;
 	float: left;
-	color: #888888;
+	color: #444444;
 	font-weight: 600;
 	font-size: 12px;
 }
@@ -489,7 +489,7 @@ nav#shortcuts ul li a:hover
 .sections_bar ul li a
 {
 	font-size: 13px;
-	color: #888888;
+	color: #444444;
 }
 
 .sections_bar ul li a:hover
