@@ -218,8 +218,8 @@ nav#usernav ul li.active a
 	width: 180px;
 	border: 1px solid #000000;
 	box-shadow: none;
-	padding: 8px 10px;
-	margin: -6px 12px 0 -15px;
+	padding: 7px 10px;
+	margin: -5px 12px 0 -15px;
 	filter: alpha(opacity=100);
   	-khtml-opacity: 1;
   	-moz-opacity: 1;
