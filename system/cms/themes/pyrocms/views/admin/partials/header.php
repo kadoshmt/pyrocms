@@ -13,6 +13,9 @@
 				<li><i class="icon-eye-open icon-white"></i> <?php echo anchor('', lang('cp_view_frontend'), 'target="_blank"'); ?></li>
 				<li><i class="icon-off icon-white"></i> <?php echo anchor('admin/logout', lang('cp_logout_label')); ?></li>
 				<li><i class="icon-question-sign icon-white"></i> <?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
+				<li id="search">
+					<input id="searchform" name="searchform" type="text" placeholder="Type something and hit enter..." />
+				</li> 
 			</ul>
 		</nav>
 	</div>
