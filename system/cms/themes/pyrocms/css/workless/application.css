@@ -528,7 +528,7 @@ nav#shortcuts ul li a:hover
  */
 #content-body
 {
-	height: 600px;
+	height: 100%;
 	margin-top: 25px;
 	padding-bottom: 75px;
 	float: left;
@@ -699,13 +699,13 @@ nav#shortcuts ul li a:hover
 }
 
 /* recent comments */
-#recent_comments ul li
+#existing-comments ul li
 {
 	border-bottom: 1px solid #eeeeee;
 	margin-bottom: 25px;
 }
 
-#recent_comments ul li img
+#existing-comments ul li img
 {
 	background: #ffffff;
 	padding: 4px;
