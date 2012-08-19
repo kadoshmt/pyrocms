@@ -563,6 +563,7 @@ nav#shortcuts ul li a:hover
 #content-body
 {
 	margin-top: 25px;
+	padding-bottom: 75px;
 	float: left;
 }
 /* @end Content */
@@ -758,16 +759,125 @@ nav#shortcuts ul li a:hover
 footer
 {	
 	margin-top: 35px!important;
+	padding: 25px 0 25px 0;
 	text-align: center;
 	float: left;
 	width: 100%;
 	background: #222222;
 	border-top: 1px solid #000000;
 }
-/* @end Header */
+
+footer #pyroinfo
+{
+	text-align: left;
+	width: 400px;
+}
+
+footer p
+{
+	color: #666666;
+	text-shadow: 0 1px 0 #000000;
+	font-size: 12px;
+	float: left;
+}
+/* @end Footer */
 
 
 
+/**
+ * Footer Lang Select
+ */
+footer select 
+{
+	width: 250px!important;
+}
+
+ul#lang 
+{
+	text-align: center;
+	color: #333333;
+	margin-right: 25px;
+	float: right;
+}
+
+ul#lang li
+{
+	font-size: 13px;
+}
+
+ul#lang li.result-selected,
+ul#lang li:hover
+{
+	background: #ff9900;
+	color: #ffffff;
+}
+
+ul#lang .chzn-results 
+{
+	width: 97%;
+	z-index: 999;
+	position: relative;
+}
+
+ul#lang .chzn-drop 
+{
+	top: -230px!important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+ul#lang .chzn-container .chzn-single-with-drop 
+{
+	border-top: none;
+	-webkit-border-radius: 0 0 4px 4px;
+	-khtml-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+	background: #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(100%, #eeeeee));
+	background: -webkit-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background: -moz-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background: -o-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background: -ms-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background: linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+
+}
+
+ul#lang .chzn-container .chzn-single div b 
+{
+	background: url("../../img/chosen-sprite.png") no-repeat scroll 0 1px transparent;
+	background-position: -18px 1px;
+}
+
+ul#lang .chzn-container .chzn-single-with-drop div b 
+{
+	background: url("../../img/chosen-sprite.png") no-repeat scroll 0 1px transparent;
+	background-position: 0 0;
+}
+
+ul#lang .chzn-container .chzn-drop 
+{
+	-webkit-border-radius: 4px 4px 0 0;
+	-khtml-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	border-top: 1px solid #aaa;
+}
+
+ul#lang .highlighted 
+{
+	text-shadow: none;
+}
+/* @end Footer Lang Select */
+
+
+
+/**
+ * jQuery UI
+ */
 .ui-tabs-nav {width: 100%; float: left;}
 .ui-tabs-nav li { position: relative; float: left; border-bottom-width: 0 !important; margin: 7px 0 0 5px; padding: 0; }
 .ui-tabs-panel { display: block; border-width: 0; background: none; float: left; }
@@ -777,6 +887,8 @@ footer
 .ui-autocomplete li:last-child { border: none; }
 .ui-autocomplete li:hover { background: #ffffff; /* Old browsers */ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(51%, #f9f9f9), color-stop(100%, #ffffff)); background: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 51%, #ffffff 100%); background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 51%, #ffffff 100%); background: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 51%, #ffffff 100%); background: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 51%, #ffffff 100%); background: linear-gradient(top, #ffffff 0%, #f9f9f9 51%, #ffffff 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); }
 .ui-autocomplete li a { width: 290px; display: block; }
+/* @end jQuery UI */
+
 
 
 /**

@@ -37,8 +37,9 @@
 
 	<footer>
 		<div class="wrapper">
-			<p>Copyright &copy; 2009 - <?php echo date('Y'); ?> PyroCMS &nbsp; -- &nbsp; Version <?php echo CMS_VERSION.' '.CMS_EDITION; ?> &nbsp; -- &nbsp; Rendered in {elapsed_time} sec. using {memory_usage}.</p>
-
+			<div id="pyroinfo">
+				<p>&copy; 2009 - <?php echo date('Y'); ?> PyroCMS &nbsp; -- &nbsp; Version <?php echo CMS_VERSION.' '.CMS_EDITION; ?><br>Rendered in {elapsed_time} sec. using {memory_usage}.</p>
+			</div>
 			<ul id="lang">
 				<form action="<?php echo current_url(); ?>" id="change_language" method="get">
 					<select class="chzn" name="lang" onchange="this.form.submit();">
