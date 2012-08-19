@@ -26,18 +26,49 @@
 		<div id="search">
 			<script type="text/javascript">
 				$(function() {
-					var autocompleteSearch = [
-						'Help',
-						"Posts",
-						"Pages",
-						"Profile",
-						"Permissions",
-						"Settings",
-						"Users"
+					var projects = [
+						{
+							value: "pyrocms",
+							label: "PyroCMS",
+							tags: "kickass, content, management",
+							loc: "post"
+						},
+						{
+							value: "permissions",
+							label: "Permissions",
+							tags: "settings, users, roles",
+							loc: "settings"
+						},
+						{
+							value: "pages",
+							label: "Pages",
+							tags: "content, writing",
+							loc: "pages"
+						}
 					];
+
 					$("#searchform").autocomplete({
-						source: autocompleteSearch
-					});
+						minLength: 0,
+						source: projects,
+						focus: function(event, ui){
+							$("#searchform").val( ui.item.label);
+
+						return false;
+						},
+						select: function(event, ui){
+							$("#searchform").val( ui.item.label);
+							$("#searchform-id").val(ui.item.value);
+							$("#searchform-description").html(ui.item.tags);
+
+						return false;
+						}
+					})
+					.data( "autocomplete" )._renderItem = function(ul, item){
+						return $("<li></li>")
+						.data("item.autocomplete", item)
+						.append('<a>' + item.label + '</a><div class="tags">' + item.tags + '</div><div class="loc">' + item.loc + '</div>')
+						.appendTo(ul);
+					};
 				});
 			</script>
 			<input id="searchform" name="searchform" type="text" placeholder="Type something and hit enter..." />

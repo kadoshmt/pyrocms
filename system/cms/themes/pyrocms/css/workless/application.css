@@ -372,14 +372,40 @@ nav#primary ul li ul li a.current:hover
 .ui-menu-item
 {
 	border: none!important;
-	border-bottom: 1px solid #eeeeee!important;
+	border: 1px solid #eeeeee!important;
+	border-top: none!important;
 	border-radius: none!important;
-	width: 260px!important;
+	width: 258px!important;
+}
+
+.ui-menu-item,
+.ui-menu-item a
+{
+	font-size: 13px!important;
 }
 
 .ui-menu-item a
 {
-	font-size: 13px!important;
+	font-weight: bold;
+}
+
+.ui-menu-item .tags
+{
+	font-size: 12px;
+	width: 200px!important;
+	white-space: nowrap!important;
+	overflow: hidden!important;
+	text-overflow: ellipsis!important;
+}
+
+.ui-menu-item .loc
+{
+	background: #eeeeee;
+	border-radius: 3px;
+	font-size: 12px;
+	padding: 0 5px;
+	float: right;
+	margin-top: -18px;
 }
  /* @end Search */
 
