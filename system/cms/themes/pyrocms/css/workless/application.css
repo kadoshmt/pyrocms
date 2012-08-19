@@ -51,40 +51,6 @@ a:active
 
 
 /**
- * Logo
- */
-#site_logo
-{
-	margin-top: 5px;
-	margin-right: 22px;
-	float: right;
-}
-
-#site_logo h3
-{
-	font-size: 16px;
-	font-weight: 200;
-	text-transform: uppercase;
-}
-
-#site_logo h3 a
-{
-	color: #888888;
-	text-shadow: 0 -1px 0 #000000;
-  	-webkit-transition: 250ms linear all; 
-	-moz-transition: 250ms linear all; 
-	transition: 250ms linear all; 
-}
-
-#site_logo a:hover
-{
-	color: #ffffff;
-}
-/* @end Logo */
-
-
-
-/**
  * Topbars
  */
 .primary_bar
@@ -377,7 +343,7 @@ nav#primary ul li ul li a.current:hover
 	border: 1px solid #000000;
 	box-shadow: none;
 	padding: 7px 10px;
-	margin: 13px 25px 0 0;
+	margin: 13px 18px 0 0;
 	filter: alpha(opacity=50);
   	-khtml-opacity: 0.5;
   	-moz-opacity: 0.5;
@@ -562,6 +528,7 @@ nav#shortcuts ul li a:hover
  */
 #content-body
 {
+	height: 600px;
 	margin-top: 25px;
 	padding-bottom: 75px;
 	float: left;
@@ -796,7 +763,7 @@ ul#lang
 {
 	text-align: center;
 	color: #333333;
-	margin-right: 25px;
+	margin-right: 60px;
 	float: right;
 }
 
@@ -902,554 +869,29 @@ ul#lang .highlighted
  * application and these may need altering for your
  * own project.
  */
-h1
-{
-	font-size: 2em;
-}
-
-h2
-{
-	font-size: 1.5em;
-}
-
-h3
-{
-	font-size: 1.2em;
-}
-
-h4
-{
-	font-size: 1.25em;
-}
-
-h5
-{
-	font-size: 1em;
-}
-
-h6
-{
-	font-size: 0.875em;
-}
-
-p,
-li,
-dl dd
-{
-	font-size: 14px;
-}
-
-code,
-footer p
-{
-	font-size: 12px;
-}
-
-nav#primary .selector
-{
-	display: inherit;
-}
-
-nav#primary ul 
-{ 
-	display: none; 
-}
-
-#logo
-	{
-		width: 50px;
-	}
-
-#logo > small
-{
-	display: none;
-}
-
-.wrapper
-{
-	width: 380px;
-}
-
-.one_full,
-.one_half,
-.one_third,
-.two_third,
-.one_quarter
-{
-	margin-right: 0px; 
-	width: 280px;
-}
-
-/** 
- * iPhone landscape 
- */
-@media (min-width: 480px) {
-	h1
-	{
-		font-size: 2em;
-	}
-
-	h2
-	{
-		font-size: 1.5em;
-	}
-
-	h3
-	{
-		font-size: 1.2em;
-	}
-
-	h4
-	{
-		font-size: 1.25em;
-	}
-
-	h5
-	{
-		font-size: 1em;
-	}
-
-	h6
-	{
-		font-size: 0.875em;
-	}
-
-	p,
-	li,
-	dl dd
-	{
-		font-size: 14px;
-	}
-
-	code,
-	footer p
-	{
-		font-size: 12px;
-	}
-
-	nav#primary .selector
-	{
-		display: inherit;
-	}
-	
-	nav#primary ul 
-	{ 
-		display: none; 
-	}
-
-	#logo
-	{
-		width: 50px;
-	}
-
-	#logo > small
-	{
-		display: none;
-	}
-
-	.wrapper
-	{
-		width: 480px;
-	}
-
-	.one_full,
-	.one_half,
-	.one_third,
-	.two_third,
-	.one_quarter
-	{
-		margin-right: 0px; 
-		width: 380px;
-	}
-}
 
 /** 
  * Small tablet portrait 
  */
 @media (min-width: 640px) {
-	h1
-	{
-		font-size: 2.2em;
-	}
-
-	h2
-	{
-		font-size: 1.8em;
-	}
-
-	h3
-	{
-		font-size: 1.5em;
-	}
-
-	h4
-	{
-		font-size: 1.25em;
-	}
-
-	h5
-	{
-		font-size: 1em;
-	}
-
-	h6
-	{
-		font-size: 0.875em;
-	}
-
-	p,
-	li,
-	dl dd
-	{
-		font-size: 16px;
-	}
-
-	code,
-	footer p
-	{
-		font-size: 14px;
-	}
-
-	nav#primary .selector
-	{
-		display: inherit;
-	}
-	
-	nav#primary ul 
-	{ 
-		display: none; 
-	}
-
-	#logo
-	{
-		width: 50px;
-	}
-
-	#logo > small
-	{
-		display: none;
-	}
-
-	.wrapper
-	{
-		width: 640px;
-	}
-
-	.one_full,
-	.one_half,
-	.one_third,
-	.two_third,
-	.one_quarter
-	{
-		margin-right: 0px; 	
-		width: 540px;
-	}
 }
 
 /** 
  * iPad portrait 
  */
 @media (min-width: 768px) {
-	h1
-	{
-		font-size: 2.2em;
-	}
-
-	h2
-	{
-		font-size: 1.8em;
-	}
-
-	h3
-	{
-		font-size: 1.5em;
-	}
-
-	h4
-	{
-		font-size: 1.25em;
-	}
-
-	h5
-	{
-		font-size: 1em;
-	}
-
-	h6
-	{
-		font-size: 0.875em;
-	}
-
-	p,
-	li,
-	dl dd
-	{
-		font-size: 16px;
-	}
-
-	code,
-	footer p
-	{
-		font-size: 14px;
-	}
-
-	nav#primary .selector
-	{
-		display: none;
-	}
-	
-	nav#primary ul 
-	{ 
-		display: inherit; 
-	}
-
-	#logo
-	{
-		width: 50px;
-	}
-	
-	#logo > small
-	{
-		display: none;
-	}
-
-	.wrapper
-	{
-		width: 768px;
-	}
-
-	.one_full
-	{
-		width: 618px;
-	}
-
-	.one_half
-	{
-		width: 280px;
-		margin-right: 50px; 
-	}
-
-	.one_third
-	{
-		width: 170px;
-		margin-right: 50px; 
-	}
-
-	.two_third
-	{
-		width: 390px;
-		margin-right: 50px; 
-	}
-
-	.one_quarter
-	{
-		width: 110px;
-		margin-right: 50px; 
-	}
 }
 
 /**
  * Small browser / iPad landscape 
  */
 @media (min-width: 1024px) {
-	h1
-	{
-		font-size: 2.4em;
-	}
-
-	h2
-	{
-		font-size: 1.8em;
-	}
-
-	h3
-	{
-		font-size: 1.5em;
-	}
-
-	h4
-	{
-		font-size: 1.25em;
-	}
-
-	h5
-	{
-		font-size: 1em;
-	}
-
-	h6
-	{
-		font-size: 0.875em;
-	}
-
-	p,
-	li,
-	dl dd
-	{
-		font-size: 16px;
-	}
-
-	code,
-	footer p
-	{
-		font-size: 14px;
-	}
-
-	nav#primary .selector
-	{
-		display: none;
-	}
-	
-	nav#primary ul 
-	{ 
-		display: inherit; 
-	}
-
-	#logo
-	{
-		width: 200px;
-	}
-
-	#logo > small
-	{
-		display: inline;
-	}
-
-	.wrapper
-	{
-		width: 1024px;
-	}
-
-	.one_full
-	{
-		width: 874px;
-	}
-
-	.one_half
-	{
-		width: 410px;
-		margin-right: 50px; 
-	}
-
-	.one_third
-	{
-		width: 250px;
-		margin-right: 50px; 
-	}
-
-	.two_third
-	{
-		width: 550px;
-		margin-right: 50px; 
-	}
-
-	.one_quarter
-	{
-		width: 180px;
-		margin-right: 50px; 
-	}
 }
 
 /** 
  * Generic browser 
  */
 @media (min-width: 1280px) {
-	h1
-	{
-		font-size: 2.5em;
-	}
-
-	h2
-	{
-		font-size: 1.8em;
-	}
-
-	h3
-	{
-		font-size: 1.5em;
-	}
-
-	h4
-	{
-		font-size: 1.25em;
-	}
-
-	h5
-	{
-		font-size: 1em;
-	}
-
-	h6
-	{
-		font-size: 0.875em;
-	}
-
-	p,
-	li,
-	dl dd
-	{
-		font-size: 16px;
-	}
-
-	code,
-	footer p
-	{
-		font-size: 14px;
-	}
-
-	nav#primary .selector
-	{
-		display: none;
-	}
-	
-	nav#primary ul 
-	{ 
-		display: inherit; 
-	}
-
-	#logo
-	{
-		width: 200px;
-	}
-	
-	#logo > small
-	{
-		display: inline;
-	}
-
-	.wrapper
-	{
-		width: 1180px;
-	}
-
-	.one_full
-	{
-		width: 1030px;
-	}
-
-	.one_half
-	{
-		width: 480px;
-		margin-right: 50px; 
-	}
-
-	.one_third
-	{
-		width: 300px;
-		margin-right: 50px; 
-	}
-
-	.two_third
-	{
-		width: 650px;
-		margin-right: 50px; 
-	}
-
-	.one_quarter
-	{
-		width: 210px;
-		margin-right: 50px; 
-	}
 }
 
 /** 
@@ -1508,16 +950,6 @@ nav#primary ul
 	{ 
 		display: inherit; 
 	}
-
-	#logo
-	{
-		width: 200px;
-	}
-
-	#logo > small
-	{
-		display: inline;
-	}
 	
 	.wrapper
 	{
@@ -1526,7 +958,7 @@ nav#primary ul
 
 	.one_full
 	{
-		width: 1280px;
+		width: 1265px;
 	}
 
 	.one_half

@@ -92,9 +92,10 @@ select.chzn-select {
   visibility: hidden;
   height: 28px !important;
   min-height: 28px !important;
+  min-width: 260px;
 }
 .chzn-container {
-  font-size: 13px;
+  font-size: 13px!important;
   position: relative;
   display: inline-block;
   zoom: 1;
@@ -112,6 +113,7 @@ select.chzn-select {
   -o-box-shadow     : 0 4px 5px rgba(0,0,0,.15);
   box-shadow        : 0 4px 5px rgba(0,0,0,.15);
   z-index: 999;
+  min-width: 268px;
 }
 /* @end */
 
@@ -141,6 +143,7 @@ select.chzn-select {
   padding: 0 0 0 8px;
   color: #444;
   text-decoration: none;
+  min-width: 260px;
 }
 .chzn-container-single .chzn-single span {
   margin-top: 5px;
@@ -201,7 +204,8 @@ select.chzn-select {
   outline: 0;
   border: 1px solid #aaa;
   font-family: sans-serif;
-  font-size: 1em;
+  font-size: 13px;
+  min-width: 230px;
 }
 .chzn-container-single .chzn-drop {
   -webkit-border-radius: 0 0 4px 4px;
@@ -312,6 +316,7 @@ select.chzn-select {
   overflow-y: auto;
   text-align: left;
   width: 100%;
+  font-size: 13px;
 }
 .chzn-container-multi .chzn-results {
   margin: -1px 0 0;
@@ -328,7 +333,7 @@ select.chzn-select {
   cursor: pointer;
 }
 .chzn-container .chzn-results .highlighted {
-  background: #3875d7;
+  background: #ff9900;
   color: #fff;
 }
 .chzn-container .chzn-results li em {
