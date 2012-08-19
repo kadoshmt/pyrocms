@@ -125,7 +125,7 @@
 
 			<section class="item">
 				<ul class="nolist">
-					<?php if(array_key_exists('comments', $this->permissions) OR $this->current_user->group == 'admin'): ?>
+					<?php if (isset($this->permissions['comments']) or $this->current_user->group === 'admin'): ?>
 						<li>
 							<a class="button orange" title="<?php echo lang('cp_manage_comments') ?>" href="<?php echo site_url('admin/comments') ?>">
 								<i class="icon-comment icon-white"></i> <?php echo lang('cp_manage_comments') ?>
@@ -133,7 +133,7 @@
 						</li>
 					<?php endif; ?>
 				
-					<?php if(array_key_exists('pages', $this->permissions) OR $this->current_user->group == 'admin'): ?>
+					<?php if (isset($this->permissions['pages']) or $this->current_user->group === 'admin'): ?>
 						<li>
 							<a class="button orange" title="<?php echo lang('cp_manage_pages'); ?>" href="<?php echo site_url('admin/pages') ?>">
 								<i class="icon-file icon-white"></i> <?php echo lang('cp_manage_pages'); ?>
@@ -141,7 +141,7 @@
 						</li>
 					<?php endif; ?>
 				
-					<?php if(array_key_exists('files', $this->permissions) OR $this->current_user->group == 'admin'): ?>
+					<?php if (isset($this->permissions['files']) or $this->current_user->group === 'admin'): ?>
 						<li>
 							<a class="button orange" title="<?php echo lang('cp_manage_files'); ?>" href="<?php echo site_url('admin/files') ?>">
 								<i class="icon-folder-open icon-white"></i> <?php echo lang('cp_manage_files'); ?>
@@ -149,7 +149,7 @@
 						</li>
 					<?php endif; ?>
 				
-					<?php if(array_key_exists('users', $this->permissions) OR $this->current_user->group == 'admin'): ?>
+					<?php if (isset($this->permissions['users']) or $this->current_user->group === 'admin'): ?>
 						<li>
 							<a class="button orange" title="<?php echo lang('cp_manage_users'); ?>" href="<?php echo site_url('admin/users') ?>">
 								<i class="icon-user icon-white"></i> <?php echo lang('cp_manage_users'); ?>
@@ -163,8 +163,8 @@
 	<!-- /quick links -->
 
 	<!-- recent comments -->
-	<?php if (isset($recent_comments) AND is_array($recent_comments) AND $theme_options->pyrocms_recent_comments == 'yes') : ?>
-		<div id="recent_comments" class="one_half last">
+	<?php if (isset($recent_comments) and is_array($recent_comments) and $theme_options->pyrocms_recent_comments == 'yes') : ?>
+		<div id="existing-comments" class="one_half last">
 			<section class="title">
 				<h4><i class="icon-comment"></i> <?php echo lang('comments.recent_comments') ?></h4>
 			</section>
@@ -172,12 +172,15 @@
 			<section class="item">
 				<?php if (count($recent_comments)): ?>
 					<ul class="nolist">
-						<?php foreach ($recent_comments AS $rant) : ?>
+						<?php foreach ($recent_comments as $comment) : ?>
 							<li>
-								<?php echo gravatar($rant->email, 100); ?>
+								<?php echo gravatar($comment->user_email, 100); ?>
 								<p>
-									<?php echo sprintf(lang('comments.list_comment'), $rant->name, $rant->item); ?>
-									<?php echo (Settings::get('comment_markdown') AND $rant->parsed > '') ? strip_tags($rant->parsed) : $rant->comment; ?>
+									<?php
+										$title = $comment->uri ? anchor($comment->uri, $comment->entry_title) : $comment->entry_title;
+										echo sprintf(lang('comments:list_comment'), $comment->user_name, $title);
+									?>
+									<?php echo (Settings::get('comment_markdown') AND $comment->parsed > '') ? strip_tags($comment->parsed) : $comment->comment; ?>
 								</p>
 							</li>
 						<?php endforeach; ?>
