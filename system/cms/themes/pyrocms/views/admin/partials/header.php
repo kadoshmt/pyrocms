@@ -13,9 +13,6 @@
 				<li><i class="icon-eye-open icon-white"></i> <?php echo anchor('', lang('cp_view_frontend'), 'target="_blank"'); ?></li>
 				<li><i class="icon-off icon-white"></i> <?php echo anchor('admin/logout', lang('cp_logout_label')); ?></li>
 				<li><i class="icon-question-sign icon-white"></i> <?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
-				<li id="search">
-					<input id="searchform" name="searchform" type="text" placeholder="Type something and hit enter..." />
-				</li> 
 			</ul>
 		</nav>
 	</div>
@@ -23,13 +20,28 @@
 
 <div class="secondary_bar" dir=<?php $vars = $this->load->_ci_cached_vars; echo $vars['lang']['direction']; ?>>
 	<div class="wrapper">
-		<div id="site_logo">
-			<h3><?php echo anchor('', $this->settings->site_name, 'target="_blank"'); ?></h3>
-		</div>
-
 		<nav id="primary">
 			<?php file_partial('navigation'); ?>
 		</nav>
+		<div id="search">
+			<script type="text/javascript">
+				$(function() {
+					var autocompleteSearch = [
+						'Help',
+						"Posts",
+						"Pages",
+						"Profile",
+						"Permissions",
+						"Settings",
+						"Users"
+					];
+					$("#searchform").autocomplete({
+						source: autocompleteSearch
+					});
+				});
+			</script>
+			<input id="searchform" name="searchform" type="text" placeholder="Type something and hit enter..." />
+		</div>
 	</div>
 </div>
 

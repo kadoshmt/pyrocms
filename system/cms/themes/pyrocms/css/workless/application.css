@@ -211,31 +211,6 @@ nav#usernav ul li.active a
 
 
 /**
- * Search
- */
-#search input[type="text"]
-{
-	width: 180px;
-	border: 1px solid #000000;
-	box-shadow: none;
-	padding: 7px 10px;
-	margin: -5px 12px 0 -15px;
-	filter: alpha(opacity=100);
-  	-khtml-opacity: 1;
-  	-moz-opacity: 1;
-  	opacity: 1;
-  	float: right;
-}
-
-#search input[type="text"]:focus
-{
-	width: 250px;
-}
- /* @end Search */
-
-
-
-/**
  * Navigation
  */
 nav#primary ul
@@ -390,6 +365,58 @@ nav#primary ul li ul li a.current:hover
 	color: #ff9900;
 }
 /* @end Navigation */
+
+
+
+/**
+ * Search
+ */
+#search input[type="text"]
+{
+	width: 180px;
+	border: 1px solid #000000;
+	box-shadow: none;
+	padding: 7px 10px;
+	margin: 13px 25px 0 0;
+	filter: alpha(opacity=50);
+  	-khtml-opacity: 0.5;
+  	-moz-opacity: 0.5;
+  	opacity: 0.5;
+  	float: right;
+}
+
+#search input[type="text"]:focus
+{
+	width: 250px;
+	filter: alpha(opacity=100);
+  	-khtml-opacity: 1;
+  	-moz-opacity: 1;
+  	opacity: 1;
+}
+
+.ui-autocomplete
+{
+	background: none!important;
+	border: none!important;
+	border-radius: none!important;
+	width: 260px!important;
+	z-index: 9999!important;
+}
+
+.ui-menu-item
+{
+	border: none!important;
+	border-bottom: 1px solid #eeeeee!important;
+	border-radius: none!important;
+	width: 260px!important;
+}
+
+.ui-menu-item a
+{
+	font-size: 13px!important;
+}
+ /* @end Search */
+
 
 
 
