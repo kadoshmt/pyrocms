@@ -323,9 +323,11 @@ select.chzn-select {
   padding: 0;
 }
 .chzn-container .chzn-results li {
+  max-width: 92%;
   line-height: 80%;
-  padding: 7px 7px 8px;
+  padding: 7px 6px 8px 6px;
   margin: 0;
+  font-size: 13px;
   list-style: none;
   float: none;
 }
