@@ -13,12 +13,27 @@
     background-image: url("../../img/glyphicons-halflings.png");
     background-position: 14px 14px;
     background-repeat: no-repeat;
+    -webkit-transition: 250ms linear all; 
+    -moz-transition: 250ms linear all; 
+    transition: 250ms linear all; 
+    filter: alpha(opacity=100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
 }
 
 [class^="icon-"]:last-child,
 [class*=" icon-"]:last-child 
 {
     *margin-left: 0;
+}
+
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover 
+{
+    -khtml-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .icon-white 
