@@ -13,7 +13,7 @@
        			<?php echo form_dropdown('f_category', array(0 => lang('global:select-all')) + $categories); ?>
     		</li>
 			<li class="one_quarter"><?php echo form_input('f_keywords'); ?></li>
-			<li class=""><?php echo anchor(current_url() . '#', lang('buttons.cancel'), 'class="button red"'); ?></li>
+			<li style="font-size:13px;" class="one_quarter last"><?php echo anchor(current_url() . '#', lang('buttons.cancel'), 'class="alignright button red"'); ?></li>
 		</ul>
 	<?php echo form_close(); ?>
 </fieldset>

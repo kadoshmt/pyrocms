@@ -259,6 +259,10 @@ a.label:hover
 {
 	display: inline;
 }
+.ti
+{
+	text-indent: -9999px;
+}
 
 /** 
  * Sizes 

@@ -1,6 +1,7 @@
 /**
  * Buttons 
  */
+ button,
 .button, 
 .button:visited 
 {
@@ -9,7 +10,7 @@
 	padding: 5px 10px 4px 10px; 
 	margin-right: 3px;
 	margin-bottom: 10px;
-	color: #ffffff; 
+	color: #ffffff!important; 
 	font-weight: bold; 
 	text-decoration: none;
 	border-radius: 3px;
@@ -23,7 +24,7 @@
 { 
 	background-color: #111111; 
 	color: #ffffff;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 2px solid inherit;
 }
 .button:active
 { 
@@ -138,5 +139,17 @@
 }
 .yellow.button:hover { 
 	background-color: #fc9200; 
+}
+
+/**
+ * Gray
+ */
+.gray.button,
+.gray.button:visited		
+{ 
+	background-color: #cccccc; 
+}
+.yellow.button:hover { 
+	background-color: #aaaaaa; 
 }
 /* @end Buttons */
