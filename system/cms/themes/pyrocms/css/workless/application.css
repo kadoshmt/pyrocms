@@ -868,6 +868,35 @@ ul#lang .highlighted
 
 
 /**
+ * CKEditor
+ */
+span.cke_skin_kama 
+{
+    border-radius: none!important;
+    border: none!important;
+    padding: 5px;
+}
+
+.cke_skin_kama .cke_wrapper 
+{
+    border-radius: none!important;
+    background-color: #ffffff;
+    background-image: none!important;
+    background-repeat: repeat-x;
+    background-position: 0px -1950px;
+    display: block;
+    padding: 5px;
+}
+
+.cke_dialog select 
+{ 
+	visibility: visible; 
+	min-width: 0; 
+}
+
+
+
+/**
  * jQuery UI
  */
 .ui-tabs-nav {width: 100%; float: left;}
@@ -1008,5 +1037,10 @@ ul#lang .highlighted
 	{
 		width: 240px;
 		margin-right: 50px; 
+	}
+
+	span.cke_skin_kama 
+	{
+		max-width: 1200px!important;
 	}
 }
