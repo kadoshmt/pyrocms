@@ -17,8 +17,8 @@ form ul li
 fieldset 
 { 
 	border: 1px solid rgba(0, 0, 0, 0.2); 
-	margin: 5px 0 15px 0; 
-	padding: 25px; 
+	margin: 0 0 15px 0; 
+	padding: 25px;
 }
 fieldset ul 
 { 
@@ -36,7 +36,7 @@ fieldset ul li
 label 
 { 
 	cursor: pointer; 
-	font-size: 18px; 
+	font-size: 14px; 
 	font-weight: 200; 
 }
 legend 
@@ -87,7 +87,6 @@ input[type="text"],
 input[type="password"], 
 textarea 
 {
-	width: 100%;
 	background: #f9f9f9;
 	margin-top: 0;
 	margin-bottom: 5px;

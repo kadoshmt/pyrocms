@@ -19,8 +19,6 @@
 	
 	<!-- Content tab -->
 	<div class="form_inputs" id="blog-content-tab">
-		
-		<fieldset>
 	
 		<ul>
 			<li>
@@ -64,14 +62,11 @@
 			</li>
 		</ul>
         <?php echo form_hidden('preview_hash',$post->preview_hash)?>
-		</fieldset>
 		
 	</div>
 
 	<!-- Options tab -->
 	<div class="form_inputs" id="blog-options-tab">
-	
-		<fieldset>
 		
 		<ul>
 			<li>
@@ -113,8 +108,6 @@
 				</div>
 			</li>
 		</ul>
-
-		</fieldset>
 		
 	</div>
 
