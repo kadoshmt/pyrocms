@@ -38,14 +38,19 @@
 				</button>
 				<?php break;
 			case 'activate':
-			case 'deactivate':
 			case 'approve':
 			case 'publish':
 			case 'save':
 			case 'save_exit':
-			case 'unapprove':
 			case 'upload': ?>
-				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="<?php echo $btn_class; ?> green">
+				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="button green">
+					<span><?php echo lang('buttons.' . $button); ?></span>
+				</button>
+
+			<?php break;
+			case 'deactivate':
+			case 'unapprove': ?>
+				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="button red">
 					<span><?php echo lang('buttons.' . $button); ?></span>
 				</button>
 				<?php break;
