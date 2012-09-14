@@ -42,6 +42,7 @@
 			case 'publish':
 			case 'save':
 			case 'save_exit':
+			case 'preview':
 			case 'upload': ?>
 				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="button green">
 					<span><?php echo lang('buttons.' . $button); ?></span>
@@ -56,8 +57,7 @@
 				<?php break;
 			case 'cancel':
 			case 'close':
-			case 'preview':
-				if($btn_class == 'button') $btn_class .= ' gray';
+				if($btn_class == 'button') $btn_class .= ' red';
 				$uri = 'admin/' . $this->module_details['slug'];
 				$active_section = $this->load->get_var('active_section');
 

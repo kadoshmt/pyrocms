@@ -19,32 +19,44 @@
 	
 	<!-- Content tab -->
 	<div class="form_inputs" id="blog-content-tab">
+		<hr style="margin-top:0;">
 	
 		<ul>
 			<li>
-				<label for="title"><?php echo lang('global:title'); ?> <span>*</span></label>
-				<div class="input"><?php echo form_input('title', htmlspecialchars_decode($post->title), 'maxlength="100" id="title"'); ?></div>				
+				
+				<div class="input">
+					<label for="title"><?php echo lang('global:title'); ?></label>
+					<?php echo form_input('title', htmlspecialchars_decode($post->title), 'maxlength="100" id="title"'); ?>
+					<span>This field is required.</span>
+				</div>				
 			</li>
 			
 			<li>
-				<label for="slug"><?php echo lang('global:slug'); ?> <span>*</span></label>
-				<div class="input"><?php echo form_input('slug', $post->slug, 'maxlength="100" class="width-20"'); ?></div>
+				<div class="input">
+					<label for="slug"><?php echo lang('global:slug'); ?> <span class="label red">Required *</span></label>
+					<?php echo form_input('slug', $post->slug, 'maxlength="100" class="width-20"'); ?>
+				</div>
 			</li>
 			
 			<li>
 				<label for="status"><?php echo lang('blog:status_label'); ?></label>
 				<div class="input"><?php echo form_dropdown('status', array('draft' => lang('blog:draft_label'), 'live' => lang('blog:live_label')), $post->status) ?></div>
 			</li>
+
+			<hr>
 			
 			<li>
 				<label for="intro"><?php echo lang('blog:intro_label'); ?></label>
-				<br style="clear: both;" />
-				<?php echo form_textarea(array('id' => 'intro', 'name' => 'intro', 'value' => $post->intro, 'rows' => 5, 'class' => 'blog wysiwyg-simple')); ?>
+
+				<div class="one_full">
+					<?php echo form_textarea(array('id' => 'intro', 'name' => 'intro', 'value' => $post->intro, 'rows' => 5, 'class' => 'blog wysiwyg-simple')); ?>
+				</div>
 			</li>
+
+			<hr>
 			
 			<li class="editor">
-				<label for="body"><?php echo lang('blog:content_label'); ?></label>
-				
+				<label for="body"><?php echo lang('blog:content_label'); ?></label><br>
 				<div class="input">
 					<?php echo form_dropdown('type', array(
 						'html' => 'html',
@@ -54,10 +66,8 @@
 					), $post->type); ?>
 				</div>
 				
-				<br style="clear:both"/>
-				
 				<div class="one_full">
-				<?php echo form_textarea(array('id' => 'body', 'name' => 'body', 'value' => $post->body, 'rows' => 30, 'class' => $post->type)); ?>
+					<?php echo form_textarea(array('id' => 'body', 'name' => 'body', 'value' => $post->body, 'rows' => 30, 'class' => $post->type)); ?>
 				</div>
 			</li>
 		</ul>
