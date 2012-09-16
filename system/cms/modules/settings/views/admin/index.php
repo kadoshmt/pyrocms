@@ -20,23 +20,18 @@
 
 			<?php foreach ($setting_sections as $section_slug => $section_name): ?>
 			<div class="form_inputs" id="<?php echo $section_slug;?>">
-				<fieldset>
-					<ul>
+				<hr style="margin-top:0;">
+
+				<ul id="settings-tab">
 					<?php $section_count = 1; foreach ($settings[$section_slug] as $setting): ?>
 						<li id="<?php echo $setting->slug; ?>" class="<?php echo $section_count++ % 2 == 0 ? 'even' : ''; ?>">
-							<label for="<?php echo $setting->slug; ?>">
-								<?php echo $setting->title; ?>
-								<?php if($setting->description): echo '<small>'.$setting->description.'</small>'; endif; ?>
-							</label>
-
-							<div class="input <?php echo 'type-' . $setting->type; ?>">
-								<?php echo $setting->form_control; ?>
-							</div>
 							<span class="move-handle"></span>
+							<label for="<?php echo $setting->slug; ?>"><?php echo $setting->title; ?></label>
+							<div class="input <?php echo 'type-' . $setting->type; ?>"><?php echo $setting->form_control; ?></div>
+							<span class="info"><?php if($setting->description): echo '<small>'.$setting->description.'</small>'; endif; ?></span>
 						</li>
 					<?php endforeach; ?>
-					</ul>
-				</fieldset>
+				</ul>
 			</div>
 			<?php endforeach; ?>
 

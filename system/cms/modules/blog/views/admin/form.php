@@ -23,18 +23,18 @@
 	
 		<ul>
 			<li>
-				
 				<div class="input">
 					<label for="title"><?php echo lang('global:title'); ?></label>
 					<?php echo form_input('title', htmlspecialchars_decode($post->title), 'maxlength="100" id="title"'); ?>
-					<span>This field is required.</span>
+					<span class="req">This field is required.</span>
 				</div>				
 			</li>
 			
 			<li>
 				<div class="input">
-					<label for="slug"><?php echo lang('global:slug'); ?> <span class="label red">Required *</span></label>
+					<label for="slug"><?php echo lang('global:slug'); ?></label>
 					<?php echo form_input('slug', $post->slug, 'maxlength="100" class="width-20"'); ?>
+					<span class="req">This field is required.</span>
 				</div>
 			</li>
 			
@@ -47,7 +47,6 @@
 			
 			<li>
 				<label for="intro"><?php echo lang('blog:intro_label'); ?></label>
-
 				<div class="one_full">
 					<?php echo form_textarea(array('id' => 'intro', 'name' => 'intro', 'value' => $post->intro, 'rows' => 5, 'class' => 'blog wysiwyg-simple')); ?>
 				</div>
@@ -77,6 +76,7 @@
 
 	<!-- Options tab -->
 	<div class="form_inputs" id="blog-options-tab">
+		<hr style="margin-top:0;">
 		
 		<ul>
 			<li>
